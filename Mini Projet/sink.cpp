@@ -23,7 +23,7 @@ void SINK::COMPORTEMENT(){
 	}
 
 	while(true){
-		cout << i << endl;
+		//cout << i << endl;
 		if(i % 2 == 1){
 			outImFile << fifo_sink.read() << endl;		
 			//cout << "retour a la ligne" << endl;

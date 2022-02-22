@@ -7,6 +7,7 @@ SC_MODULE(SINK){
 		sc_in_clk clk;
 		sc_fifo_in<float> fifo_sink;
 
+
         SC_CTOR(SINK)
         {
           SC_THREAD(COMPORTEMENT);

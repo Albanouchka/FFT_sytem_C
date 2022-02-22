@@ -5,7 +5,10 @@
 SC_MODULE(SOURCE){
 	public:
 		sc_in_clk clk;
-		sc_fifo_out<float> fifo_source;
+        sc_out<bool> data_valid;
+        sc_in<bool> data_req;
+        sc_out<float> in_real;
+        sc_out<float> in_imag;
 
         SC_CTOR(SOURCE)
         {

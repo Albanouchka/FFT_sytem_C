@@ -24,12 +24,16 @@ SC_MODULE(FFT8){
     public :
     sc_in_clk clk;
     sc_fifo_out<float> fft_out;
-    sc_fifo_in<float> fft_in;
+    sc_in<float> in_real;
+    sc_in<float> in_imag;
+    sc_in<bool> data_valid;
+    sc_out<bool> data_req;
+
 
     SC_CTOR(FFT8)
     {
         SC_THREAD(COMPORTEMENT);
-        sensitive << clk;
+        sensitive << clk.pos();
     }
 
     private :

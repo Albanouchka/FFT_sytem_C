@@ -56,31 +56,44 @@ void fft(complex_t in[8], complex_t out[8])
 
 void FFT8::COMPORTEMENT(){
 
+
 while(true){
+    data_req = false;
 
-
-    if(compteur < 16){
-        tmp[compteur] = fft_in.read();
-        compteur++;
-    }
-    else{
-        for(int j = 0; j < 8; j++){
-            in[j].real = tmp[2*j];
-            in[j].imag = tmp[2*j+1];
-        }
+    if(compteur < 8){
         
+        data_req = true;
+
+        if (data_valid){
+            in[compteur].real = in_real;
+            in[compteur].imag = in_imag;
+            cout << in[compteur].real << "+ i"<< in[compteur].imag << endl;
+            cout << "compteur : " << compteur << endl;
+            compteur++;
+        }
+
+        if(compteur == 8){
+            data_req = false;
+        }
+    }
+
+    else{
+        
+        data_req = true;
         fft(in, out);
         compteur = 0;
-        
+
         for(int k = 0; k<8; k++){
             fft_out.write(out[k].real);
+
             fft_out.write(out[k].imag);
-        } 
+
+        }
+
     }
+    
     wait();      
 
 };
-
-
 
 }
