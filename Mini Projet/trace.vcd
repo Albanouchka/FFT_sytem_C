@@ -1,5 +1,5 @@
 $date
-     Feb 22, 2022       12:05:29
+     Feb 22, 2022       14:30:10
 $end
 
 $version
@@ -89,119 +89,75 @@ $end
 
 #1
 r0 aaaab
-r2011 aaaar
 
 #2
 r0 aaaac
 r2011 aaaae
 r2011 aaaaf
-r0 aaaar
-r2011 aaaas
 
 #3
 r0 aaaad
-r2011 aaaat
 
 #4
 r0 aaaae
 r2011 aaaag
 r2011 aaaah
-r0 aaaas
-r2011 aaaau
 
 #5
 r0 aaaaf
-r2011 aaaav
 
 #6
 r0 aaaag
 r2011 aaaai
 r2011 aaaaj
-r0 aaaat
-r2011 aaaaw
 
 #7
 r0 aaaah
-r2011 aaaax
 
 #8
 r0 aaaai
 r2011 aaaak
 r2011 aaaal
-r0 aaaau
-r2011 aaaay
 
 #9
 r0 aaaaj
-r2011 aaaaz
 
 #10
 r0 aaaak
 r2011 aaaam
 r2011 aaaan
-r0 aaaav
-r2011 aaaba
 
 #11
 r0 aaaal
-r2011 aaabb
 
 #12
 r0 aaaam
 r2011 aaaao
 r2011 aaaap
-r0 aaaaw
-r2011 aaabc
 
 #13
 r0 aaaan
-r2011 aaabd
 
 #14
 r1 aaaaa
 r1 aaaab
 r0 aaaao
-r0 aaaax
-r2011 aaabe
 
 #15
 r0 aaaap
-r2011 aaabf
 
 #16
-r0 aaaaa
-r1 aaaaq
-r0 aaaay
+r16088 aaaar
+r0 aaaau
+r0 aaaav
+r0 aaaaw
+r0 aaaax
 
 #17
-r0 aaaab
-r1 aaaar
+r0 aaaaa
 
 #18
-r0 aaaaz
-
-#20
-r0 aaaba
-
-#22
-r0 aaabb
-
-#24
-r0 aaabc
-
-#26
-r0 aaabd
-
-#28
-r0 aaabe
-
-#30
-r0 aaabf
-
-#32
-r0 aaaaq
-
-#34
+r0 aaaab
 r0 aaaar
 
 #2000
