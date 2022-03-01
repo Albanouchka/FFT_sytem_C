@@ -12,7 +12,8 @@ complex_t weights[4] = W;
 complex_t in[8];
 complex_t out[8];
 
-int compteur =0;
+int compteur = 0;
+int compteur_sink = 0;
 float tmp[16];
 
 
@@ -59,6 +60,7 @@ void FFT8::COMPORTEMENT(){
 
 while(true){
     data_req = false;
+    data_valid_sink = false;
 
     if(compteur < 8){
         
@@ -67,27 +69,34 @@ while(true){
         if (data_valid){
             in[compteur].real = in_real;
             in[compteur].imag = in_imag;
-            cout << in[compteur].real << "+ i"<< in[compteur].imag << endl;
-            cout << "compteur : " << compteur << endl;
+            //cout << in[compteur].real << "+ i"<< in[compteur].imag << endl;
+            //cout << "compteur : " << compteur << endl;
             compteur++;
         }
 
         if(compteur == 8){
             data_req = false;
+            
+            compteur_sink = 0;
         }
     }
-
     else{
-        
-        data_req = true;
         fft(in, out);
-        compteur = 0;
+        data_valid_sink = true;
 
-        for(int k = 0; k<8; k++){
-            fft_out.write(out[k].real);
+        if(data_req_sink){
+            out_real = out[compteur_sink].real; // + (double)compteur_sink * 1000000;
+            //cout << out_real <<endl;
+            out_imag = out[compteur_sink].imag; // + (double)compteur_sink *  1000000;
 
-            fft_out.write(out[k].imag);
+            compteur_sink++;
+        }
 
+        if(compteur_sink == 8){
+            wait();
+            data_valid_sink = false;
+            data_req = true;
+            compteur = 0;
         }
 
     }

@@ -21,7 +21,11 @@ sc_trace(tf,mainTop.in_imag, "in_imag");
 sc_trace(tf,mainTop.data_valid, "data_valid");
 sc_trace(tf,mainTop.data_req, "data_req");
 sc_trace(tf, mainTop.clk, "clk");
-//mainTop.fifo_fft_output.trace(tf);
+
+sc_trace(tf,mainTop.out_real, "out_real");
+sc_trace(tf,mainTop.out_imag, "out_imag");
+sc_trace(tf,mainTop.data_valid_sink, "data_valid_sink");
+sc_trace(tf,mainTop.data_req_sink, "data_req_sink");
 
 //Lancement de la simulation
 sc_start(2000 , SC_NS);

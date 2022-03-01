@@ -1,5 +1,5 @@
 $date
-     Feb 22, 2022       17:32:35
+     Mar 01, 2022       15:20:49
 $end
 
 $version
@@ -16,6 +16,10 @@ $var real    1  aaaab  in_imag       $end
 $var wire    1  aaaac  data_valid       $end
 $var wire    1  aaaad  data_req       $end
 $var wire    1  aaaae  clk       $end
+$var real    1  aaaaf  out_real       $end
+$var real    1  aaaag  out_imag       $end
+$var wire    1  aaaah  data_valid_sink       $end
+$var wire    1  aaaai  data_req_sink       $end
 $upscope $end
 $enddefinitions  $end
 
@@ -29,55 +33,52 @@ r2011 aaaab
 1aaaac
 1aaaad
 1aaaae
+r0 aaaaf
+r0 aaaag
+0aaaah
+1aaaai
 $end
 
 #1
 0aaaae
 
 #2
-r20112 aaaab
 1aaaae
 
 #3
 0aaaae
 
 #4
-r20113 aaaab
 1aaaae
 
 #5
 0aaaae
 
 #6
-r20114 aaaab
 1aaaae
 
 #7
 0aaaae
 
 #8
-r20115 aaaab
 1aaaae
 
 #9
 0aaaae
 
 #10
-r20116 aaaab
 1aaaae
 
 #11
 0aaaae
 
 #12
-r20117 aaaab
 1aaaae
 
 #13
 0aaaae
 
 #14
-r2011 aaaab
 1aaaae
 
 #15
@@ -93,71 +94,69 @@ r1 aaaab
 0aaaae
 
 #18
-1aaaad
 1aaaae
+r16088 aaaaf
+r16088 aaaag
+1aaaah
 
 #19
 0aaaae
 
 #20
-r2 aaaaa
 1aaaae
+r0 aaaaf
+r0 aaaag
 
 #21
 0aaaae
 
 #22
-r3 aaaaa
 1aaaae
 
 #23
 0aaaae
 
 #24
-r4 aaaaa
 1aaaae
 
 #25
 0aaaae
 
 #26
-r5 aaaaa
 1aaaae
 
 #27
 0aaaae
 
 #28
-r6 aaaaa
 1aaaae
 
 #29
 0aaaae
 
 #30
-r7 aaaaa
 1aaaae
 
 #31
 0aaaae
 
 #32
-r8 aaaaa
 1aaaae
 
 #33
 0aaaae
 
 #34
-0aaaac
-0aaaad
+1aaaad
 1aaaae
+0aaaah
 
 #35
 0aaaae
 
 #36
-1aaaad
+r0 aaaaa
+r0 aaaab
 1aaaae
 
 #37
@@ -200,6 +199,8 @@ r8 aaaaa
 0aaaae
 
 #50
+r456 aaaab
+0aaaad
 1aaaae
 
 #51
@@ -207,6 +208,9 @@ r8 aaaaa
 
 #52
 1aaaae
+r1 aaaaf
+r1 aaaag
+1aaaah
 
 #53
 0aaaae
@@ -254,54 +258,73 @@ r8 aaaaa
 0aaaae
 
 #68
+1aaaad
 1aaaae
+0aaaah
 
 #69
 0aaaae
 
 #70
+r120 aaaaa
+r234 aaaab
 1aaaae
 
 #71
 0aaaae
 
 #72
+r234 aaaaa
+r120 aaaab
 1aaaae
 
 #73
 0aaaae
 
 #74
+r120 aaaaa
+r0 aaaab
 1aaaae
 
 #75
 0aaaae
 
 #76
+r0 aaaaa
+r-120 aaaab
 1aaaae
 
 #77
 0aaaae
 
 #78
+r-120 aaaaa
+r-234 aaaab
 1aaaae
 
 #79
 0aaaae
 
 #80
+r-234 aaaaa
+r-456 aaaab
 1aaaae
 
 #81
 0aaaae
 
 #82
+r-120 aaaaa
+r-768 aaaab
 1aaaae
 
 #83
 0aaaae
 
 #84
+r123 aaaaa
+r29 aaaab
+0aaaad
 1aaaae
 
 #85
@@ -309,156 +332,210 @@ r8 aaaaa
 
 #86
 1aaaae
+r0 aaaaf
+r-768 aaaag
+1aaaah
 
 #87
 0aaaae
 
 #88
 1aaaae
+r1449.984008789062 aaaaf
+r-443.5433044433594 aaaag
 
 #89
 0aaaae
 
 #90
 1aaaae
+r768 aaaaf
+r672 aaaag
 
 #91
 0aaaae
 
 #92
 1aaaae
+r297.9839782714844 aaaaf
+r916.7207641601562 aaaag
 
 #93
 0aaaae
 
 #94
 1aaaae
+r0 aaaaf
+r768 aaaag
 
 #95
 0aaaae
 
 #96
 1aaaae
+r-297.9839782714844 aaaaf
+r659.5432739257812 aaaag
 
 #97
 0aaaae
 
 #98
 1aaaae
+r-768 aaaaf
+r672 aaaag
 
 #99
 0aaaae
 
 #100
 1aaaae
+r-1449.984008789062 aaaaf
+r1171.279174804688 aaaag
 
 #101
 0aaaae
 
 #102
+1aaaad
 1aaaae
+0aaaah
 
 #103
 0aaaae
 
 #104
+r34 aaaaa
+r34 aaaab
 1aaaae
 
 #105
 0aaaae
 
 #106
+r-23 aaaaa
+r85 aaaab
 1aaaae
 
 #107
 0aaaae
 
 #108
+r12 aaaaa
+r206 aaaab
 1aaaae
 
 #109
 0aaaae
 
 #110
+r45 aaaaa
+r336 aaaab
 1aaaae
 
 #111
 0aaaae
 
 #112
+r0 aaaaa
+r593 aaaab
 1aaaae
 
 #113
 0aaaae
 
 #114
+r67 aaaaa
+r823 aaaab
 1aaaae
 
 #115
 0aaaae
 
 #116
+r134 aaaaa
+r422 aaaab
 1aaaae
 
 #117
 0aaaae
 
 #118
+0aaaad
 1aaaae
 
 #119
 0aaaae
 
 #120
+0aaaac
 1aaaae
+r392 aaaaf
+r2528 aaaag
+1aaaah
 
 #121
 0aaaae
 
 #122
 1aaaae
+r-1097.699096679688 aaaaf
+r-397.3122253417969 aaaag
 
 #123
 0aaaae
 
 #124
 1aaaae
+r123 aaaaf
+r-431 aaaag
 
 #125
 0aaaae
 
 #126
 1aaaae
+r157.68359375 aaaaf
+r-92.23697662353516 aaaag
 
 #127
 0aaaae
 
 #128
 1aaaae
+r32 aaaaf
+r18 aaaag
 
 #129
 0aaaae
 
 #130
 1aaaae
+r-222.3009033203125 aaaaf
+r-36.68777084350586 aaaag
 
 #131
 0aaaae
 
 #132
 1aaaae
+r125 aaaaf
+r-655 aaaag
 
 #133
 0aaaae
 
 #134
 1aaaae
+r1474.31640625 aaaaf
+r-701.7630004882812 aaaag
 
 #135
 0aaaae
 
 #136
+1aaaad
 1aaaae
+0aaaah
 
 #137
 0aaaae

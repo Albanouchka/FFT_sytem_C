@@ -23,12 +23,16 @@ SC_MODULE(FFT8){
     
     public :
     sc_in_clk clk;
-    sc_fifo_out<float> fft_out;
+
     sc_in<float> in_real;
     sc_in<float> in_imag;
     sc_in<bool> data_valid;
     sc_out<bool> data_req;
 
+    sc_out<float> out_real;
+    sc_out<float> out_imag;
+    sc_out<bool>  data_valid_sink;
+    sc_in<bool>   data_req_sink;
 
     SC_CTOR(FFT8)
     {
