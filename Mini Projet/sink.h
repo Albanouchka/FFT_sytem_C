@@ -5,8 +5,9 @@
 SC_MODULE(SINK){
 	public:
 		sc_in_clk clk;
-    sc_in<float>  out_real;
-    sc_in<float>  out_imag;
+    //syntaxe caca
+    sc_in<sc_fixed<23,18>>  out_real;
+    sc_in<sc_fixed<23,18>>  out_imag;
     sc_in<bool>   data_valid_sink;
     sc_out<bool>  data_req_sink;
 

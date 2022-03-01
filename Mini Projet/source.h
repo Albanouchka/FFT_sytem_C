@@ -7,8 +7,8 @@ SC_MODULE(SOURCE){
 		sc_in_clk clk;
         sc_out<bool> data_valid;
         sc_in<bool> data_req;
-        sc_out<float> in_real;
-        sc_out<float> in_imag;
+        sc_in<sc_fixed<23,18>> in_real;
+        sc_in<sc_fixed<23,18>> in_imag;
 
         SC_CTOR(SOURCE)
         {

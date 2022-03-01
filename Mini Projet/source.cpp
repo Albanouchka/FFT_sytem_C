@@ -7,8 +7,8 @@ void SOURCE::COMPORTEMENT(){
 	ifstream inReFile("input_real.txt");
 	ifstream inImFile("input_im.txt");
 
-	float 		tmpRe;
-	float		tmpImag;
+	int 	tmpRe;
+	int		tmpImag;
 
 	if(!inReFile){
 		cerr << "Unable to open file input_real.txt";
@@ -33,7 +33,7 @@ void SOURCE::COMPORTEMENT(){
 			if(data_req){
 
 				inReFile >> tmpRe;
-				in_real.write(tmpRe);
+				in_real.write(tmpRe)
 				inImFile >> tmpImag;
 				in_imag.write(tmpImag);
 			}
