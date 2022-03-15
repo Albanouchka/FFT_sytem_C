@@ -1,3 +1,4 @@
+#include <sysc/datatypes/fx/sc_fixed.h>
 #include "source.h"
 #include <fstream>
 #include <iostream>
@@ -7,8 +8,8 @@ void SOURCE::COMPORTEMENT(){
 	ifstream inReFile("input_real.txt");
 	ifstream inImFile("input_im.txt");
 
-	int 	tmpRe;
-	int		tmpImag;
+	sc_dt::sc_fixed<23,18> 	tmpRe;
+	sc_dt::sc_fixed<23,18>		tmpImag;
 
 	if(!inReFile){
 		cerr << "Unable to open file input_real.txt";
@@ -33,9 +34,10 @@ void SOURCE::COMPORTEMENT(){
 			if(data_req){
 
 				inReFile >> tmpRe;
-				in_real.write(tmpRe)
+				in_real = tmpRe;
+
 				inImFile >> tmpImag;
-				in_imag.write(tmpImag);
+				in_imag = tmpImag;
 			}
 			
 		}
