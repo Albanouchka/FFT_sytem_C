@@ -13,6 +13,10 @@ void SINK::COMPORTEMENT(){
 	ofstream outReFile("outputRe.txt");
 	ofstream outImFile("outputIm.txt");
 	
+	float 		tmpRe;
+	float		tmpImag;
+
+
 	if(!outReFile){
 		cerr << "Unable to open file outputRe.txt";
 		exit(1);
@@ -22,21 +26,35 @@ void SINK::COMPORTEMENT(){
 		exit(1);
 	}
 
+	wait();
+
 	while(true){
-		cout << i << endl;
-		if(i % 2 == 1){
-			outImFile << fifo_sink.read() << endl;		
-			//cout << "retour a la ligne" << endl;
-			i++;
-			wait();
+
+		data_req_sink = false;
+
+		if(!outReFile.eof() && !outImFile.eof())
+		{
+			data_req_sink = true;
+
+			if(data_valid_sink){
+
+				
+				tmpRe = out_real.read();
+				//cout << tmpRe << endl;
+				outReFile << tmpRe << endl;
+				
+				tmpImag = out_imag.read();
+				outImFile << tmpImag << endl;
+			}
+			
 		}
-		else{
-			outReFile << fifo_sink.read() << endl;
-			//cout << "retour a la ligne bis" << endl;
-			i++;
-			wait();
-		}		
-		
+		else
+		{ 
+			outReFile.close();
+			outImFile.close();
+		};
+
+		wait();
 	}
 
 	outReFile.close();
